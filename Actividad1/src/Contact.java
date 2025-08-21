@@ -1,7 +1,7 @@
 public class Contact {
     String nombre;
     String direccion;
-    long telefono;  // <- cambio aquí
+    long telefono;
     double salario;
 
     public Contact(String nombre, String direccion, long telefono, double salario) {
@@ -13,7 +13,6 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "[Nombre: " + nombre + ", Dirección: " + direccion +
-                ", Teléfono: " + telefono + ", Salario: $" + salario + "]";
+        return "[Nombre: " + nombre + ", Dirección: " + direccion + ", Teléfono: " + telefono + ", Salario: $" + salario + "]";
     }
 }
