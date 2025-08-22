@@ -19,6 +19,8 @@ public class Main {
                 System.out.println("4. Agregar proceso");
                 System.out.println("5. Procesar comando");
                 System.out.println("6. Ver procesos en ejecución");
+                System.out.println("7. Ver último comando ejecutado");
+                System.out.println("8. Ver proceso actual en ejecución");
                 System.out.println("0. Salir del simulador");
                 System.out.print("Opción elegida: ");
                 opcion = sc.nextInt();
@@ -67,6 +69,22 @@ public class Main {
                 case 6 -> {
                     System.out.println("Procesos en ejecución:");
                     procesosEnEjecucion.mostrar();
+                }
+                case 7 -> {
+                    System.out.println("Último comando ejecutado:");
+                    String ultimo = historialComandos.peek();
+                    if (ultimo != null)
+                        System.out.println(ultimo);
+                    else
+                        System.out.println("No hay comandos en el historial.");
+                }
+                case 8 -> {
+                    System.out.println("Proceso actual en ejecución:");
+                    String actual = procesosEnEjecucion.peek();
+                    if (actual != null)
+                        System.out.println(actual);
+                    else
+                        System.out.println("No hay procesos en ejecución.");
                 }
                 case 0 -> System.out.println("Saliendo del simulador...");
                 default -> System.out.println("Opción inválida.");
